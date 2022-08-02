@@ -38,7 +38,10 @@ This image shows the weather application appearance and functionality.
 * geting 
 
 ## Changes made to the code 𝌡
-* the 
+* created the title and heading
+* created the basic grid layout using Bootstrap - for the 5-day weather forecast section and search for a city
+* adjusted the background colour for 5-day weather
+
 
 ## Link to the deployed website 💻
 URL: 

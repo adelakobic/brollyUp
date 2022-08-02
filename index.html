@@ -23,9 +23,34 @@
         <div class="hero">
             <!--img src="./assets/images/umbrella-rainbow-color-yellow-background.jpg" not working right now--> 
         </div>
+        
+            <!-- grid layout  -->
+            <div class="container text-center col-12"> <!-- sets the main grid -->
+                <div class="row">
+                    <!-- aside? Search for a city on the LEFT side of screen -->
+                  <div class="col-4">
+                    <h3>Search for a City:</h3>
+                    </div>
+                  
+                    <!-- Main part displaying 'home' weather -->
+                  <div class="col-8">
+                    <h2>☀️ Home Weather 🌦</h2>
+                </div>
 
-        <p></p>
-
+                   <!-- 5 day forecast for 'home' weather -->
+                   <div class="col-8 container text-center" id="homeW">
+                    <h4 class="col-8">5-Day Forecast</h4>
+                        <div class="row row-cols-auto" id="fiveDay">
+                            <div class="col">Column 1</div>
+                            <div class="col">Column 2</div>
+                            <div class="col">Column 3</div>
+                            <div class="col">Column 4</div>
+                            <div class="col">Column 5</div>
+                        </div>
+                    </div>
+                </div>
+            <br>
+            <p>Code created by Adela Kobic 🙋🏻‍♀️</p>
     
         <!-- link jQuery 3.6 and moment.js 2.29.4 --->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
