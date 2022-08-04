@@ -22,57 +22,62 @@
             <h1 class="p-3 mb-2 bg-primary text-white">Brolly-Up ☔️ Weather Dashboard 🌤</h1>
         </header>
 
-        <main class="flex-row justify-space-between">
-            <section class="hero"><img src="./assets/images/umbrella-rainbow-color-yellow-background.jpg"></section>
+        <main class="row justify-space-between">
+
+            <!--section class="hero"><img src="./assets/images/umbrella-rainbow-color-yellow-background.jpg"></section>
             <!-- hero image of a brolly -->
         
             <!-- grid layout  -->
-            <div class="container text-center col-12"> <!-- sets the main grid -->
-                <div class="row">
-                    <!-- aside? Search for a city on the LEFT side of screen -->
-                  <div class="col-12 col-md-4"> <!-- sets the width for that side of the page -->
-                    <div class="card"> <!-- card container NEW -->
-                        <h3 class="card-header text-justify" id="city">Search for a City</h3>
-                        <form id="city-search" class="card-body">
-                            <label class="search-city" for="city">Enter city:</label>
-                            <input name="enter-city" id="typeCity" type="text" autofocus="true" class="city-input" />
-                            <br>
-                            <br>
-                            <!-- Search button -->
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Search  <i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
+           
+            <!-- aside? Search for a city on the LEFT side of screen -->
+            <div class="container col-12 col-md-4 w-25" id="inputCity"> <!-- sets the width for that side of the page -->
+            
+                <div class="card"> <!-- card container NEW -->
+                    <h3 class="card-header text-justify" id="city">Search for a City</h3>
+                   <form id="city-search" class="card-body">
+                    <label class="search-city" for="city">Enter city:</label>
+                    <input name="enter-city" id="typeCity" type="text" autofocus="true" class="city-input" />
+                    <br>
+                    <br>
+                    <!-- Search button -->
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Search  <i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
 
-                    <div class="container card">
-                    
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">London</a></li>
+                    <div class="destinationBtn group-flush d-grid gap-2">
+                        <button type="button" class="btn btn-lg">London</button>
+                        <button type="button" class="btn btn-lg">Paris</button>
+                        <button type="button" class="btn btn-lg">Berlin</button>
+                        <button type="button" class="btn btn-lg">Rome</button>
+                        <br>
+                            <!--<li><a class="dropdown-item" href="#">London</a></li>
                             <li><a class="dropdown-item" href="#">Paris</a></li>
                             <li><a class="dropdown-item" href="#">Berlin</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-        
-                  
-                    <!-- Main part displaying 'home' weather -->
-                    <div class="col-12 col-md-8 container">
-                    <h2 class="home-header">☀️ Home Weather 🌦</h2>
-                    </div>
-
-                   <!-- 5 day forecast for 'home' weather -->
-                   <div class="col-12 col-md-8 container-end text-center" id="homeW">
-                    <h4 class="col-8">5-Day Forecast</h4>
-                        <div class="row row-cols-auto" id="fiveDay">
-                            <div class="col">Column 1</div>
-                            <div class="col">Column 2</div>
-                            <div class="col">Column 3</div>
-                            <div class="col">Column 4</div>
-                            <div class="col">Column 5</div>
-                        </div>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>-->
                     </div>
                 </div>
+            </div>
+            <br>
+        
+                  
+            <!-- Main part displaying 'home' weather -->
+            <div class="col-12 col-md-8 col align-end container w-70">
+                <h2 class="home-header">☀️ Home Weather 🌦</h2>
+            </div>
+
+            <!-- 5 day forecast for 'home' weather -->
+            <div class="col-12 col-md-8 col align-end container w-70">
+                <div class="container-end text-center" id="homeW">
+                <h4 class="col-8">5-Day Forecast</h4>
+                    <div class="row row-cols-auto" id="fiveDay">
+                    <div class="col">Column 1</div>
+                    <div class="col">Column 2</div>
+                    <div class="col">Column 3</div>
+                    <div class="col">Column 4</div>
+                    <div class="col">Column 5</div>
+                </div>
+            </div>
             <br>
             <p>Code created by Adela Kobic 🙋🏻‍♀️</p>
         </main>

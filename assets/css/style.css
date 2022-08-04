@@ -30,7 +30,7 @@ main {
     color: white;
 }
 .bg-primary.bg-gradient{
-    color: rgb(42, 42, 235);
+    color: rgb(42, 42, 235), rgb(46, 43, 132);
 }
 /* hero image of brolly  - check flea-box project for */
 .hero {
@@ -48,8 +48,22 @@ main {
 }
 
 /* Search City section */
+
+#inputCity{
+    position: start;
+}
 #city {
     background-color: var(--primary);
+
+}
+
+.btn {
+    background-color: #769ee2;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Home weather section*/
