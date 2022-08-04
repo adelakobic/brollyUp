@@ -1,14 +1,30 @@
+:root {
+    --primary: #769ee2;
+}
+
+* {
+    box-sizing: content-box;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', serif;
     color: #000000;
     font-size: 16px;
+    line-height: 1.5;
+    margin: 5px;
+    padding: 0,
+}
+
+main {
+    margin: 10px;
+
 }
 .title{
     color: white;
     text-align: center;
 }
 
-
+/* header of the page */
 .bg-primary{
     text-align: center;
     color: white;
@@ -16,11 +32,32 @@ body {
 .bg-primary.bg-gradient{
     color: rgb(42, 42, 235);
 }
+/* hero image of brolly  - check flea-box project for */
+.hero {
+    padding: 2px;
+    border: none;
+    border-radius: 6px;
+    max-width: 45%;
+    height: 10px;
 
+}
+
+/* setting the grids*/
 .row{
     position: relative;
 }
 
+/* Search City section */
+#city {
+    background-color: var(--primary);
+}
+
+/* Home weather section*/
+.home-header{
+    background-color: rgb(180, 212, 240);
+}
+
+/* Five day forecast section on right of page */
 #fiveDay {
     background-color: rgb(54, 54, 153) ;
     color: white;
