@@ -10,8 +10,21 @@ function searchFormSubmit(event) {
         alert('Please enter a city 🌇');
         return;
     }
-// add query string to differentiate search results
+// add query string to differentiate search results?
+}
+searchFormEl.addEventListener('submit', searchFormSubmit); //event listener to search button click
 
+function getAPI() {
+    //fetch request to get a list of cities for the weather map - no3 lesson
+    var requestUrl='https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}';
+        fetch(requestUrl)
+            .then(function(response) {
+                return response.json();
+            })
+            then(function (data) {
+                
+            })
+    
 }
 
-searchFormEl.addEventListener('submit', searchFormSubmit);
+// add fetchButton.addEventListener('click', getAPI);  //

@@ -74,19 +74,21 @@ main {
 /* Five day forecast section on right of page */
 
 .fiveDay {
-    background-color: rgb(54, 54, 153) ;
     color: white;
-    font-size: 16px;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-bottom: 10px;
 }
 
 #fiveW {
     background-color: rgb(54, 54, 153) ;
-    color: white;
     font-size: 16px;
-    padding-left: 6px;
+    padding-left: 10px;
     padding-right: 6px;
     padding-bottom: 10px;
+}
+
+.card-title {
+    color: #000000;
+}
+
+.card-text {
+    color: #000000;
 }
