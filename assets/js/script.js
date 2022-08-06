@@ -1,23 +1,14 @@
 // Set API key
-var APIkey = '8ae4d5b245e37bca05b9a458cedd88f1';
-var city;
+const APIkey = '8ae4d5b245e37bca05b9a458cedd88f1';
+var endPoint = 'https://api.openweathermap.org/data/2.5/onecall?';
+var userSearch = document.querySelector('#city-input');
 
-const btn = document.querySelector(".btn");
-//const output = document.querySelector('.today-body');
-//const url = "https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1";
-//btn.onclick = () => {
-    //fetch(url)
-        //.then((res) => res.json())
-        //.then((data) => {
-            //addData(data);
-            //console.log(data);
-        //})
-//};
-//const btn = document.querySelector(".btn");
+const btn = document.querySelector(".btn"); // DO NOT mess with this -it works (until line 19)
 
 function getApi() {}
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1';
+    // fetch request to get API link - this works - don't touch
+    //var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1';
+    var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=&appid=8ae4d5b245e37bca05b9a458cedd88f1';
     btn.onclick = () => {
   
     fetch(requestUrl)
@@ -27,7 +18,56 @@ function getApi() {}
       .then(function (data) {
         console.log(data)
       });
+} // dont touch ^ this block
+
+//input from search box to return
+var cityName = 'London';
+// from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
+var searchForCity = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
+console.log(searchForCity);
+// query selectors for results
+var resultTextEl = document.querySelector('#resultText');
+var resultContentEl = document.querySelector('#resultContent');
+
+// seach for city - if input box remains blank then should give an alert (html L27 mini proj)
+function searchCitySubmit(event) {
+  event.preventDefault();
+
+  var searchInputVal = document.querySelector('#searchCity').value;
+  if (!searchInputVal) {
+    alert('You need a search input value!');
+    return;
+  }
+
+  var queryString = '' + searchInputVal;
+
+  location.assign(queryString);
 }
+
+function getParams() {
+  var searchParams = document.location.search.split('&');
+  // get querry values
+  var query = searchParams[0].split('=').pop();
+
+  searchApi(query);
+}
+
+// print the results into console log and into resultText and resultContent
+function printResults(resultDay) {
+  console.log(resultDay);
+
+  // set up div to hold search result content on page
+  var resultCard = document.createElement('div');
+  resultCard.classList.add('card', 'text-dark','text-bg-warning','mb-3', 'p-3');
+
+  var resultBody = document.createElement('div');
+  resultBody.classList.add('card-body');
+  resultCard.append(resultBody);
+
+}
+// event listener 
+searchForCity.addEventListener('click', searchCitySubmit);
+
 
 // Get the API for today's weather - the next hour - 3 hours for today
 
