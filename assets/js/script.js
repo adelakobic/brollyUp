@@ -1,14 +1,13 @@
 // Set API key
-const APIkey = '8ae4d5b245e37bca05b9a458cedd88f1';
-var endPoint = 'https://api.openweathermap.org/data/2.5/onecall?';
-var userSearch = document.querySelector('#city-input');
+var APIkey = '8ae4d5b245e37bca05b9a458cedd88f1';
 
-const btn = document.querySelector(".btn"); // DO NOT mess with this -it works (until line 19)
+const btn = document.querySelector("btn");
+//var endPoint = 'https://api.openweathermap.org/data/2.5/onecall?';
 
 function getApi() {}
     // fetch request to get API link - this works - don't touch
-    //var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1';
-    var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=&appid=8ae4d5b245e37bca05b9a458cedd88f1';
+    var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1';
+    //var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=london&appid=8ae4d5b245e37bca05b9a458cedd88f1';
     btn.onclick = () => {
   
     fetch(requestUrl)
@@ -21,9 +20,10 @@ function getApi() {}
 } // dont touch ^ this block
 
 //input from search box to return
+var userSearch = document.querySelector('#city-input');
 var cityName = 'London';
 // from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
-var searchForCity = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
+var searchForCity = //'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
 console.log(searchForCity);
 // query selectors for results
 var resultTextEl = document.querySelector('#resultText');

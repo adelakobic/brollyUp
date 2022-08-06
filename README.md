@@ -44,6 +44,7 @@ This image shows the weather application appearance and functionality.
 * created the basic grid layout using Bootstrap - for the 5-day weather forecast section and search for a city
 * adjusted the background colour for 5-day weather
 * added cards for the Home weather section and the 5-day weather forecast
+* GIT REVERT : back to commit dd980235652e11bc5a93f038a887596a1a62d3b3 - revert failed in Terminal having to delet
 
 
 ## Link to the deployed website 💻
