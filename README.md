@@ -48,7 +48,7 @@ This image shows the weather application appearance and functionality.
 
 
 ## Link to the deployed website 💻
-URL: 
+URL: https://adelakobic.github.io/brollyUp/ 
 
 ## Credits 💃🏻
 * Picture credits as follows: 
