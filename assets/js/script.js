@@ -8,7 +8,7 @@ const btn = document.querySelector(".btn");  //DO NOT MESS
 function getApi() {}
     // fetch request to get API link - this works - don't touch
     var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1';
-    btn.onclick = (requestUrl) => {
+    btn.onclick = () => {
   
     fetch(requestUrl)
       .then(function (response) {
@@ -24,8 +24,8 @@ function getApi() {}
 //input from search box to return
 var cityName = 'London';
 // from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
-var searchForCity = //'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
-console.log(searchForCity);
+var searchForCity = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
+console.log('searching');
 // query selectors for results
 var resultTextEl = document.querySelector('#resultText');
 var resultContentEl = document.querySelector('#resultContent');
@@ -66,8 +66,8 @@ function printResults(resultDay) {
   resultCard.append(resultBody);
 
 }
-// event listener 
-searchForCity.addEventListener('click', searchCitySubmit);
+// event listener  - not working yet
+//searchForCity.addEventListener('click', searchCitySubmit);
 
 
 // Get the API for today's weather - the next hour - 3 hours for today
