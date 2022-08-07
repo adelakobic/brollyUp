@@ -20,11 +20,8 @@ function getApi() {}
 //endpoint
 var endPoint = "https://api.openweathermap.org/data/2.5/onecall?";
 
-// city Search section - if not working API key - remove 
-//var cityName = 'London';
-// from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
-
-var userInput = document.querySelector('#city-search')
+// city Search section - if not working API key - remove the var SearchFormEl
+var searchFormEl = document.querySelector('#city-search')
 function citySearchSubmit(event) {
     event.preventDefault();
 
@@ -33,17 +30,15 @@ function citySearchSubmit(event) {
         console.error('Enter city please.');
         return;
     }
-    var queryString = '#searchCity' + searchInputVal;
-
-    location.assign(queryString);
 }
+var cityName = 'London';
+// from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
+var searchForCity = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
 console.log(searchForCity);
 
 function getCity() {}
     // fetch request to get city & API link
-    var queryUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName.value + "&appid=" + APIkey;
-    //var queryUrl = 'https://api.openweathermap.org/data/2.5/weather?' + "&appid=" + APIkey + 'q=' + cityName;
-    //var queryUrl = 'https://api.openweathermap.org/data/2.5/forecast?appid=8ae4d5b245e37bca05b9a458cedd88f1&units=metric&q=' + cityName.value;
+    var queryUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&appid=" + APIkey;
     btn.onclick = () => {
   
     fetch(queryUrl)
@@ -53,16 +48,4 @@ function getCity() {}
       .then(function (data) {
         console.log(data)
       });
-} // add city name as string from input....
-
-var userInput = document.querySelector('#city-search')
-function citySearchSubmit(event) {
-    event.preventDefault();
-
-    var searchInputVal = document.querySelector('#searchCity').value;
-    if (!searchInputVal) {
-        console.error('Enter city please.');
-        return;
-    }
-    var queryString = '#searchCity' + searchInputVal;
-}
+} // not working yet
