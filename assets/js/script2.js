@@ -13,7 +13,6 @@ function getApi() {}
         return response.json();
       })
       .then(function (data) {
-        addData(data);
         console.log(data)
       });
   
