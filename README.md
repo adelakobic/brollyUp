@@ -45,7 +45,8 @@ This image shows the weather application appearance and functionality.
 * adjusted the background colour for 5-day weather
 * added cards for the Home weather section and the 5-day weather forecast
 * GIT REVERT : back to commit dd980235652e11bc5a93f038a887596a1a62d3b3 - revert failed in Terminal having to delete code and try to revert back to where I was at 13:19 on 6/8/22
-* created new JS doc (script2) to re code the API key and 
+* created new JS doc (script2) to re code the API key
+* git revert - had to AskBCS for support with this as the Git REvert video on canvas is out of date and wouldn't work for me
 
 
 ## Link to the deployed website 💻
