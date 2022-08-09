@@ -1,8 +1,8 @@
-//let weather 
+
   // Set API key
   const APIkey = '8ae4d5b245e37bca05b9a458cedd88f1';
   //const APIkey = 'f23ee9deb4e1a7450f3157c44ed020e1'; second API
-  //const APIkey = 'f2ed411effb9afab292f240ce7e371e0';
+  //const APIkey = 'f2ed411effb9afab292f240ce7e371e0'; third API
 
   const btn = document.querySelector(".btn");  //DO NOT MESS
 

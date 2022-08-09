@@ -71,6 +71,15 @@ main {
 .home-header{
     background-color: rgb(180, 212, 240);
 }
+#hWeather{
+    font-size: 20px;
+    font-weight:normal;
+    background-color: rgb(233, 217, 82);
+    text-align:justify;
+    padding-left: 30px;
+    padding-top: 20px;
+
+}
 
 /* Five day forecast section on right of page */
 
