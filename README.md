@@ -14,7 +14,7 @@ This project was created for travellers so that they can see the weather outlook
 * The starter code has been built by Adela Kobic
 
 ## Code style 🔐
-* Standard HTML, CSS and JavaScript has been used for this project. 
+* Standard HTML, CSS and vanilla JavaScript has been used for this project. 
 The language for the website is written in US English. (USA English)
 
 ## Acceptance Criteria ✅
@@ -58,6 +58,9 @@ URL: https://adelakobic.github.io/brollyUp/
 ## Credits 💃🏻
 * Picture credits as follows: 
     * Atlas Company (2022, August 2) Freepik.com <a href='https://www.freepik.com/photos/background'>Background photo created by atlascompany - www.freepik.com</a> 
+
+* Video tutorials that have helped:
+    * Ranjan-Beginner's Guide, 5-Days Weather Application using Simple JavaScript (2022,August 9) Youtube <a href='https://www.youtube.com/watch?v=QEu8_5bYm-w'>
 
 ## Licence 🪪
 * 

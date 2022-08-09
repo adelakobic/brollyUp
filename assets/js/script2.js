@@ -29,7 +29,7 @@
 
   function citySearchSubmit(event) {
       event.preventDefault();
-      console.log('I am in');
+      console.log("Todays forecast");
       var searchInputVal = document.querySelector('#searchCity').value;
       console.log('searchInputVal = ', searchInputVal);
       if (!searchInputVal) {
@@ -38,39 +38,27 @@
       } 
       todayWeather(searchInputVal)
   }
-function todayWeather(cityName){
-  //var cityName = 'L';
-  console.log("city name", cityName);
-  // from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
-  const searchForCity = 'https://api.openweathermap.org/data/2.5/weather?q=' 
-  + cityName + "&units=metric&appid=" 
-  + APIkey;
-  console.log(searchForCity);  //first call in console comes from ^ this block 
+  function todayWeather(cityName){
+    console.log("city name", cityName);
+    // from: https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys 
+    const searchForCity = 'https://api.openweathermap.org/data/2.5/weather?q=' 
+    + cityName + "&units=metric&appid=" 
+    + APIkey;
+    console.log(searchForCity);  //first call in console comes from ^ this block 
 
-  //from 'Build a weather App' vid
-  //let weather = {
-    //getWeather:function (cityName) {
-        //fetch request to get city & API link
-      
-        fetch(searchForCity)
-        //+ cityName + "&units=metric&appid=" 
-        //+ this.APIkey
-        //)     // second call in console log comes from this ^ block 
-        //btn.onclick = () => {
-      
-        //fetch(queryUrl)
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (data) {
-            //console.log(data)
-            displayWeather(data)
-          });
-        }
-      //}
-    //}
 
-          function displayWeather(data) {
+    //fetch request to get city & API link
+    fetch(searchForCity)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        //console.log(data)
+        displayWeather(data)
+      });
+  }
+
+  function displayWeather(data) {
             console.log(data);
             const { name } = data;
             const { temp, humidity } = data.main;
@@ -86,7 +74,36 @@ function todayWeather(cityName){
             document.querySelector(".description").innerText = "📻 Description: " + description;
          }
   
-    
+  // call on the 5-day weather - from line 41
+  function forecastFiveDays(cityName){
+    const forecastForCity = 'https://api.openweathermap.org/data/2.5/forecast?q='
+    + cityName + '&units=metric&appid='
+    + APIkey;
+    console.log(forecastForCity);
 
- // not working yet
+    //fetch request for 5-day forecast
+    fetch(forecastForCity)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log(data)
+        displayForecast1(data)
+      });
 
+
+  // card 1
+    function displayForecast1(data) {
+      console.log(data);
+      const { icon} = data.weather[0];
+      const { temp } = data.main;
+      const { speed } = data.wind;
+      const { humidity } = data.main;
+      console.log(icon, temp, speed, humidity);
+      document.querySelector(".icon1").src = `https://openweathermap.org/img/w/${icon}.png`;
+      document.querySelector(".temp1").innerText = "🌡 Temp: " + temp + "°C";
+      document.querySelector(".wind1").innerText = "🌬 Wind: " + speed;
+      document.querySelector(".humid1").innerText = "🫧 Humidity:" + humidity + "%";
+    }
+
+  }// not working yet
