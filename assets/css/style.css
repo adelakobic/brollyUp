@@ -32,7 +32,7 @@ main {
 .bg-primary.bg-gradient{
     color: rgb(42, 42, 235), rgb(46, 43, 132);
 }
-/* hero image of brolly  - check flea-box project for */
+/* hero image - not currently used */
 .hero {
     padding: 2px;
     border: none;
@@ -72,7 +72,7 @@ main {
     background-color: rgb(180, 212, 240);
 }
 #hWeather{
-    font-size: 20px;
+    font-size: 18px;
     font-weight:normal;
     background-color: rgb(233, 217, 82);
     text-align:justify;
@@ -85,18 +85,25 @@ main {
 
 .fiveDay {
     color: white;
+   justify-content: center;
+    text-align: center;
 }
 
 #fiveW {
     background-color: rgb(54, 54, 153) ;
     font-size: 16px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     justify-content: space-between;
-    position: relative;
+    position: end;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .card-title {

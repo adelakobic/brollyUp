@@ -38,6 +38,7 @@ This image shows the weather application appearance and functionality.
 * geting the Search container to sit on the left side of the page, and everything else to sit on the right side of the page 4/8/22 - managed to adjust the widths for the containers to 25 and 70 for them to fit 4/8/22
 * creating API key 5/8/22
 * creating variables to begin the search input process and get it to print to the page 
+* getting the 5-day weather block to sit underneath the Today's weather block 
 
 ## Changes made to the code 𝌡
 * created the title and heading
@@ -48,6 +49,7 @@ This image shows the weather application appearance and functionality.
 * created new JS doc (script2) to re code the API key
 * git revert - had to AskBCS for support with this as the Git REvert video on canvas is out of date and wouldn't work for me
 * search button now works and calls on the city weather 8/8/22 😃
+* adjusted the padding on 5-day weather to centralise it better and ensure the text was even
 
 
 ## Link to the deployed website 💻
