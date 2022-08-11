@@ -31,8 +31,10 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 THEN I am again presented with current and future conditions for that city
 
 ## Assets 📷
-This image shows the weather application appearance and functionality. 
+This image shows the weather application intended appearance and functionality. 
 ![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./assets/images/06-server-side-apis-homework-demo.png)
+This image is a screenshot of final application. 
+![Screenshot of the final application.](./assets/images/brollyscreen.png)
 
 ## Problems encountered 🤯
 * geting the Search container to sit on the left side of the page, and everything else to sit on the right side of the page 4/8/22 - managed to adjust the widths for the containers to 25 and 70 for them to fit 4/8/22
