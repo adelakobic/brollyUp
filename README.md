@@ -39,6 +39,8 @@ This image shows the weather application appearance and functionality.
 * creating API key 5/8/22
 * creating variables to begin the search input process and get it to print to the page 
 * getting the 5-day weather block to sit underneath the Today's weather block 
+* API call on the 5-day weather link is NOT working - it won't print to the console log even though the code is same format as the first main call. 8/8/22
+* getting the data to save to local storage and THEN create a button to append after 11/8/22
 
 ## Changes made to the code 𝌡
 * created the title and heading
@@ -50,6 +52,7 @@ This image shows the weather application appearance and functionality.
 * git revert - had to AskBCS for support with this as the Git REvert video on canvas is out of date and wouldn't work for me
 * search button now works and calls on the city weather 8/8/22 😃
 * adjusted the padding on 5-day weather to centralise it better and ensure the text was even
+* made the font smaller in 5-day section
 
 
 ## Link to the deployed website 💻
@@ -57,10 +60,8 @@ URL: https://adelakobic.github.io/brollyUp/
 
 ## Credits 💃🏻
 * Picture credits as follows: 
-    * Atlas Company (2022, August 2) Freepik.com <a href='https://www.freepik.com/photos/background'>Background photo created by atlascompany - www.freepik.com</a> 
-
-* Video tutorials that have helped:
-    * Ranjan-Beginner's Guide, 5-Days Weather Application using Simple JavaScript (2022,August 9) Youtube <a href='https://www.youtube.com/watch?v=QEu8_5bYm-w'>
+    * Atlas Company (2022, August 2) Freepik.com <a href='https://www.freepik.com/photos/background'>Background photo created by atlascompany - www.freepik.com</a> Hero image has not been used as yet.
+    * Bootcamp documentation (2022) <a href='https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys'> 
 
 ## Licence 🪪
-* 
+* Licence not provided for this project

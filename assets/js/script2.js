@@ -6,6 +6,8 @@
 
   const btn = document.querySelector(".btn");  //DO NOT MESS
 
+  var searchList = document.getElementById('cityB');
+
   // function getApi() {}
   //     // fetch request to get API link - this works - don't touch v this block - API KEY
   //     var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=8ae4d5b245e37bca05b9a458cedd88f1';
@@ -55,6 +57,16 @@
       .then(function (data) {
         //console.log(data)
         displayWeather(data)
+
+        // add search to a button - and save to local storage - search box 
+      .then(function(data) {
+        for (var i = 0; i <data.length; i++) {
+          var listCity = document.createElement('button');
+          listCity.textContent = data[i].html_url;
+          searchList.appendChild(listCity);
+        }
+      })
+        
       });
   }
 
@@ -71,7 +83,15 @@
            document.querySelector(".iconImage").src = `https://openweathermap.org/img/w/${icon}.png`;
            document.querySelector(".humidity").innerText = "🫧 Humidity: " + humidity + "%";
            document.querySelector(".wind").innerText = "🌬 Wind speed: " + speed;
-            document.querySelector(".description").innerText = "📻 Description: " + description;
+           document.querySelector(".description").innerText = "📻 Description: " + description;
+
+           // Set the item - stores in local storage
+           var searchResults = $(this).parent().attr('id');
+           var value = $(this).siblings('.destinationBtn').val();
+           localStorage.setItem(searchResults, value);
+           // retrieve items from storage 
+           document.getElementsByClassName('.submit');
+           localStorage.getItem(searchResults, value);
          }
   
   // call on the 5-day weather - from line 41
@@ -106,4 +126,4 @@
       document.querySelector(".humid1").innerText = "🫧 Humidity:" + humidity + "%";
     }
 
-  }// not working yet
+  }

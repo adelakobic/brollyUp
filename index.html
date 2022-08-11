@@ -30,7 +30,7 @@
             <!-- grid layout  -->
            
             <!-- Search for a city on the LEFT side of screen -->
-            <div class="container col-12 col-md-4 w-25" id="inputCity"> <!-- sets the width for that side of the page -->
+            <div class="container col-12 col-md-3 w-20" id="inputCity"> <!-- sets the width for that side of the page -->
             
                 <div class="card"> <!-- card container NEW -->
                     <h3 class="card-header text-justify" id="city">Search for a City</h3>
@@ -45,7 +45,7 @@
                     Search  <i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
 
-                    <div class="destinationBtn group-flush d-grid gap-2" id="cityB">
+                    <div class="destinationBtn group-flush d-grid gap-2 text-justify" id="cityB">
                         <button type="button" class="btn btn-lg">London</button>
                         <button type="button" class="btn btn-lg">Paris</button>
                         <button type="button" class="btn btn-lg">Berlin</button>
@@ -63,7 +63,7 @@
                 <div class="card">
                   <div class="today-body" id="hWeather">
                     <p class="city">🏙 City Name: </p>
-                    <p class="date">📆 Date: </p>
+                    <p class="date" >📆 Date: </p>
                     <p class="temp">🌡 Temperature: °C</p>
                     <p class="icon">🌤 Icon:  <img class="iconImage"/></p>
                     <p class="humidity">🫧 Humidity: %</p>
@@ -78,16 +78,16 @@
             <br>
 
             <!-- 5 day forecast for 'Home' weather -->
-            <div class="col-12 col-md-8 col align-center container w-70">
+            <div class="col-12 col-md-8 offset-md-4 justify-content-end container w-70">
                 <div id="fiveW">
-                <h4 class="col-8 fiveDay">📆 5-Day Forecast 🌤 ☔️ 🌬</h4>
+                <h4 class="col-10 fiveDay">📆 5-Day Forecast 🌤 ☔️ 🌬</h4>
             
               <!-- where the cards begin used: https://getbootstrap.com/docs/5.2/components/card/#using-grid-markup -->
-                  <div class="row">
+                  <div class="row justify-content-center">
                       <div class="col-sm-2">
                         <div class="card">
                           <div class="card-body body1" id="card1">
-                            <h5 class="card-title date1">5/8/22</h5>
+                            <h5 class="card-title date">5/8/22</h5>
                             <p class="icon1">☀️ Icon:</p>
                             <p class="card-text temp1">Temp: 
                               <p class="wind1">Wind: </p>
@@ -100,7 +100,8 @@
                       <div class="col-sm-2">
                         <div class="card">
                           <div class="card-body body2">
-                            <h5 class="card-title date2">6/8/22 </h5>
+                            <h5 class="card-title date">6/8/22 </h5>
+                            <p class="icon1">☀️ Icon:</p>
                             <p class="card-text temp2">Temp: 
                               <p class="wind2">Wind: </p>
                               <p class="humid2">Humidity:</p>
@@ -112,7 +113,8 @@
                       <div class="col-sm-2">
                         <div class="card">
                           <div class="card-body body3">
-                            <h5 class="card-title date3">7/8/22</h5>
+                            <h5 class="card-title date">7/8/22</h5>
+                            <p class="icon1">☀️ Icon:</p>
                             <p class="card-text temp3">Temp: 
                               <p class="wind3">Wind: </p>
                               <p class="humid3">Humidity:</p>
@@ -125,6 +127,7 @@
                         <div class="card">
                           <div class="card-body body4">
                             <h5 class="card-title date4">8/8/22 </h5>
+                            <p class="icon1">☀️ Icon:</p>
                             <p class="card-text temp4">Temp: 
                               <p class="wind4">Wind: </p>
                               <p class="humid4">Humidity:</p>
@@ -137,6 +140,7 @@
                         <div class="card">
                           <div class="card-body body5">
                             <h5 class="card-title date5">9/8/22</h5>
+                            <p class="icon1">☀️ Icon:</p>
                             <p class="card-text temp5">Temp: 
                               <p class="wind5">Wind: </p>
                               <p class="humid5">Humidity:</p>
