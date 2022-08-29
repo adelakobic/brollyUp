@@ -57,17 +57,21 @@
       .then(function (data) {
         //console.log(data)
         displayWeather(data)
-
-        // add search to a button - and save to local storage - search box 
-      .then(function(data) {
-        for (var i = 0; i <data.length; i++) {
-          var listCity = document.createElement('button');
-          listCity.textContent = data[i].html_url;
-          searchList.appendChild(listCity);
-        }
+        console.log('check', data)
+        forecastFiveDays(cityName)
+        uvi(data.coord.lat, data.coord.lon)
       })
+        // add search to a button - and save to local storage - search box 
+      // .then(function(data) {
         
-      });
+        // for (var i = 0; i <data.length; i++) {
+        //   var listCity = document.createElement('button');
+        //   listCity.textContent = data[i].html_url;
+        //   searchList.appendChild(listCity);
+        // }
+      // })
+        
+      
   }
 
   function displayWeather(data) {
@@ -99,7 +103,7 @@
     const forecastForCity = 'https://api.openweathermap.org/data/2.5/forecast?q='
     + cityName + '&units=metric&appid='
     + APIkey;
-    console.log(forecastForCity);
+    console.log('Check URL', forecastForCity);
 
     //fetch request for 5-day forecast
     fetch(forecastForCity)
@@ -107,23 +111,50 @@
         return response.json();
       })
       .then(function(data) {
-        console.log(data)
+        console.log('new fetch',data)
         displayForecast1(data)
       });
 
 
   // card 1
     function displayForecast1(data) {
-      console.log(data);
-      const { icon} = data.weather[0];
-      const { temp } = data.main;
-      const { speed } = data.wind;
-      const { humidity } = data.main;
-      console.log(icon, temp, speed, humidity);
-      document.querySelector(".icon1").src = `https://openweathermap.org/img/w/${icon}.png`;
-      document.querySelector(".temp1").innerText = "🌡 Temp: " + temp + "°C";
-      document.querySelector(".wind1").innerText = "🌬 Wind: " + speed;
-      document.querySelector(".humid1").innerText = "🫧 Humidity:" + humidity + "%";
+      console.log('Look at me!', data);
+      // for loop gets the data day 1-5 then the const pulls the data from the array to put on the page
+      for (let i= 1; i < 6; i++) {
+        const icon = data.list[i].weather[0].icon;
+        const temp = data.list[i].main.temp;
+        const speed = data.list[i].wind.speed;
+        const humidity = data.list[i].main.humidity;
+        console.log(icon, temp, speed, humidity);
+        document.querySelector(".icon" + i).src = `https://openweathermap.org/img/w/${icon}.png`;
+        document.querySelector(".temp" + i).innerText = "🌡 Temp: " + temp + "°C";
+        document.querySelector(".wind" + i).innerText = "🌬 Wind: " + speed;
+        document.querySelector(".humid" + i).innerText = "🫧 Humidity:" + humidity + "%";
+      }
+
+
     }
 
   }
+// UVI section
+  function uvi (lat, lon){
+    let apiurl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${APIkey}`
+    fetch(apiurl)
+    .then(function(res){
+      return res.json()
+    })
+    .then(function(data){
+      console.log('One call', data)
+    })
+  }
+
+  // save to local storage
+var search = document.querySelector("#searchCity").value;
+if (search === "") {
+  alert("Search box cannot be blank.");
+  localStorage.setItem("search", search);
+} else {
+  var newButton = document.createElement(newButton);
+  newButton.textContent = "" + searchForCity;
+  document.body.appendChild(newButton);
+}
